@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="setting_reset">setting_reset</string>
+	<string name="setting_reset_default">0</string>
+	<string name="setting_debug_log">setting_debug_log</string>
+	<string name="setting_debug_log_default">0</string>
+	<string name="setting_debug_track">setting_debug_track</string>
+	<string name="setting_debug_track_default">0</string>
+</resources>

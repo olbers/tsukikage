@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="menu_main_start">start</string>
+	<string name="menu_main_music">music</string>
+	<string name="menu_main_options">options</string>
+	<string name="menu_main_exit">exit</string>
+</resources>
