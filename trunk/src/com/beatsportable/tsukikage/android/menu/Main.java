@@ -21,10 +21,6 @@ import android.widget.TextView;
  */
 public class Main extends Activity {
 	
-	// Private Variables
-	private static final String MENU_FONT = "RoundStyleBasic.ttf";
-	private Typeface tf;
-	
 	/**
 	 * Main
 	 */
@@ -48,9 +44,6 @@ public class Main extends Activity {
 	 */
 	private void updateLayout() {
 		
-		// Load font
-		tf = Typeface.createFromAsset(getAssets(), MENU_FONT);
-		
 		// Start
 		formatMenuItem(
 				R.id.menu_main_start_TextView,
@@ -65,10 +58,17 @@ public class Main extends Activity {
 				null
 				);
 		
-		//Options
+		// Settings
 		formatMenuItem(
-				R.id.menu_main_options_TextView,
-				R.string.menu_main_options,
+				R.id.menu_main_settings_TextView,
+				R.string.menu_main_settings,
+				null
+				);
+		
+		// High scores
+		formatMenuItem(
+				R.id.menu_main_high_scores_TextView,
+				R.string.menu_main_high_scores,
 				null
 				);
 		
@@ -95,21 +95,23 @@ public class Main extends Activity {
 		try {
 			// Find the text view, may possibly fail?
 			final TextView tv = (TextView)findViewById(id_TextView);
+			final int AZURE = 0xFFE0EEEE;
+			final int ROYAL_BLUE = 0xDD4876FF;
 			
 			// Set the font format
-			tv.setTypeface(tf);
-			tv.setTextColor(Color.BLACK);
-			tv.setShadowLayer(5f, 0, 0, Color.WHITE);
+			tv.setTypeface(Typeface.MONOSPACE);
+			tv.setTextColor(AZURE);
+			tv.setShadowLayer(4f, 3, 3, ROYAL_BLUE);
 			
 			// Set highlight listener
 			tv.setOnTouchListener(new OnTouchListener() {
 				public boolean onTouch(View v, MotionEvent e) {
 					if (e.getAction() == MotionEvent.ACTION_DOWN) {
-						tv.setTextColor(Color.WHITE);
-						tv.setShadowLayer(9f, 0, 0, Color.BLACK);
-					} else if (e.getAction() == MotionEvent.ACTION_UP) {
 						tv.setTextColor(Color.BLACK);
-						tv.setShadowLayer(5f, 0, 0, Color.WHITE);
+						tv.setShadowLayer(5f, 0, 0, AZURE);
+					} else if (e.getAction() == MotionEvent.ACTION_UP) {
+						tv.setTextColor(AZURE);
+						tv.setShadowLayer(4f, 3, 3, ROYAL_BLUE);
 					}
 					return false;
 				}

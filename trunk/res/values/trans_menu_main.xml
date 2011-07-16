@@ -2,6 +2,7 @@
 <resources>
 	<string name="menu_main_start">start</string>
 	<string name="menu_main_music">music</string>
-	<string name="menu_main_options">options</string>
+	<string name="menu_main_settings">settings</string>
+	<string name="menu_main_high_scores">high scores</string>
 	<string name="menu_main_exit">exit</string>
 </resources>
